@@ -13,12 +13,10 @@ let configuration = {
 		},
 	],
 };
-var peer = new RTCPeerConnection(configuration);
-// var peer = new Peer(undefined, {
-// 	path: "/peerjs",
-// 	host: "/",
-// 	port: "443",
-// });
+
+var peer = new Peer(undefined, {
+	configuration,
+});
 
 let myVideoStream;
 navigator.mediaDevices
