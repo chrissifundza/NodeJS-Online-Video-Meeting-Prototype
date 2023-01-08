@@ -54,6 +54,7 @@ peer.on("open", (id) => {
 });
 
 const connectToNewUser = (userId, stream) => {
+	console.log(stream);
 	console.log("new User: " + userId);
 	const call = peer.call(userId, stream);
 	const video = document.createElement("video");
@@ -140,4 +141,7 @@ const setPlayVideo = () => {
 	<i class="fas fa-video-slash unmute"></i>
 	<span class="unmute">Play Video</span>`;
 	document.querySelector(".main_video_button").innerHTML = html;
+};
+const leaveMeeting = () => {
+	window.location.href = "youtube.com";
 };
